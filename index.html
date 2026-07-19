@@ -295,7 +295,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
 renderer.shadowMap.enabled = true;
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 0.7;
+renderer.toneMappingExposure = 0.55;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 200);
@@ -391,9 +391,9 @@ new THREE.GLTFLoader().load('water_flask.glb',
     model.traverse(child=>{
       if(child.isMesh){
         child.material=new THREE.MeshStandardMaterial({
-          color:0xC49A3C,
-          metalness:0.55,
-          roughness:0.32,
+          color:0x3d1f0d,
+          metalness:0.9,
+          roughness:0.30,
         });
         child.castShadow=true;
         child.receiveShadow=true;
